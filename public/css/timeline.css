@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-one: "Roboto", sans-serif;
+  --font-two: "Karla", sans-serif;
+  --font-color: #dddddd;
+  --color-one: #222831;
+  --color-two: #f05454;
+  --color-three: #30475e;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--color-one);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  color: var(--font-color);
+  padding: 10px 0;
+  text-align: center;
+  font-family: var(--font-one);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.time-line {
+  width: 85%;
+  position: relative;
+}
+.content {
+  background-color: var(--color-three);
+  color: var(--font-color);
+  position: relative;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+  font-family: var(--font-two);
+}
+.content h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.content p {
+  line-height: 1.4;
+  margin: 10px 0;
+}
+.time {
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+  opacity: 0.5;
+}
+@media (min-width: 700px) {
+  .content {
+    width: 50%;
+  }
+  .content:nth-child(odd) {
+    float: left;
+    clear: both;
+    transform: translateX(-25px);
+  }
+  .content:nth-child(even) {
+    float: right;
+    clear: both;
+    transform: translateX(25px);
+  }
+  .time-line::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: var(--color-two);
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+  .content::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--color-two);
+    position: absolute;
+    top: 50%;
+    right: -33px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.25s;
+    transform: translateY(-50%);
+  }
+  .content:hover::before {
+    background: var(--font-color);
+  }
+  .content:nth-child(even)::before {
+    left: -33px;
+  }
+  .content::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--color-three);
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+  }
+  .content:nth-child(even)::after {
+    left: -8px;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}

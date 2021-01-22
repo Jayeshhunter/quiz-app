@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=News+Cycle&display=swap");
+:root {
+  --main-font: "M PLUS Rounded 1c", sans-serif;
+  --secondary-font: "Patrick Hand", cursive;
+  --font-one: "Bungee Outline", cursive;
+  --font-two: "News Cycle", sans-serif;
+  --color-one: #4059ad;
+  --color-two: #6b9ac4;
+  --color-three: #97d8c4;
+  --color-four: #eff2f1;
+  --color-five: #f4b942;
+  --font-color1: white;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    var(--color-three) 50%,
+    var(--color-four) 50%
+  );
+  /*background-image: url("earth-1149733_1920.jpg") ;
+    background-position: center;
+    background-size: 1300px;
+    background-repeat: no-repeat;*/
+}
+.text-btns {
+  font-family: var(--font-two);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-btns p {
+  color: var(--color-one);
+  width: 50%;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.text-btns p span {
+  color: var(--color-one);
+  font-family: var(--font-one);
+  width: 50%;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.btns {
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+}
+.btns a {
+  height: 45px;
+  border-radius: 20px;
+  display: flex;
+  flex-grow: 0.5;
+  border: 1px solid var(--color-five);
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+.btns h3 {
+  color: var(--color-one);
+}
+.btns h3:before,
+.btns h3:after {
+  background-color: var(--color-one);
+  content: "";
+  display: inline-flex;
+  flex-grow: 0.5;
+  height: 1px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  vertical-align: middle;
+  width: 45%;
+}
+
+.btns h3:before {
+  right: 0.5em;
+  margin-left: 5px;
+}
+
+.btns h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+.admin-login {
+  background-color: var(--color-five);
+  color: var(--color-one);
+  transition: 0.5s;
+}
+.admin-login:hover {
+  background-color: var(--color-four);
+  color: var(--color-one);
+}
+.member-login {
+  background-color: var(--color-five);
+  color: var(--color-one);
+  transition: 0.5s;
+}
+.member-login:hover {
+  background-color: var(--color-four);
+  color: var(--color-one);
+}
+.admin,
+.member {
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  background-color: var(--color-two);
+  box-shadow: 3px 5px 30px rgba(0, 0, 0, 0.2);
+}
+.admin-close-btn,
+.member-close-btn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-five);
+  color: var(--color-one);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: 0.25s;
+}
+.admin-close-btn:hover,
+.member-close-btn:hover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-two);
+  color: var(--color-five);
+  border: 1px solid var(--color-five);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.admin strong {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--color-five);
+  font-family: var(--font-one);
+  width: 90%;
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--color-one);
+  margin: auto;
+}
+.member strong {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--color-five);
+  font-family: var(--font-one);
+  width: 90%;
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--color-one);
+  margin: auto;
+}
+.admin form {
+  padding: 5px 30px 20px 30px;
+}
+.member form {
+  padding: 5px 30px 20px 30px;
+}
+.admin form label,
+.member form label {
+  font-weight: 400;
+  color: var(--color-four);
+  font-size: 1.7rem;
+  font-family: var(--font-two);
+  margin: 20px 0px 5px 0px;
+  display: flex;
+  letter-spacing: 1px;
+}
+.admin-id,
+.email,
+.member-id {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid var(--color-four);
+}
+.admin-id input,
+.member-id input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.email input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.admin-id i,
+.member-id i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-one);
+  border-radius: 1px solid var(--color-four);
+}
+.email i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-one);
+  border-radius: 1px solid var(--color-four);
+}
+.admin-btn,
+.member-btn {
+  width: 100%;
+  height: 45px;
+  background-color: var(--color-five);
+  color: var(--color-one);
+  letter-spacing: 1px;
+  margin: 20px 0px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  transition: 0.25s;
+}
+.admin-btn:hover,
+.member-btn:hover {
+  background-color: var(--color-two);
+  color: var(--color-five);
+  border: 1px solid var(--color-five);
+}
+/*.member{
+    display: none;
+}*/
+.main-active::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.admin,
+.member {
+  display: none;
+}
+.admin-active,
+.member-active {
+  display: block;
+  animation: side-bar 0.25s;
+}
+@keyframes main {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+@keyframes side-bar {
+  0% {
+    right: -200px;
+    display: block;
+  }
+  100% {
+    right: 0px;
+    display: block;
+  }
+}
+@media (max-width: 430px) {
+  .admin,
+  .member {
+    width: 100%;
+  }
+  .btns a {
+    height: 45px;
+  }
+  .text-btns p,
+  .btns {
+    width: 80%;
+  }
+}

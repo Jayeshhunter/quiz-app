@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/index.css" />
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <section id="index">
+      <section class="main">
+        <div class="text-btns">
+          <p>
+            <span>WELCOME TO HACKEREARTH!</span><br />
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+            dignissimos recusandae itaque labore repellendus atque, tempore eius
+            tenetur quidem? Omnis!
+          </p>
+
+          <div class="btns">
+            <a href="/loginAdm" class="admin-login" onclick="admin()">Admin</a>
+            <h3 class="or">OR</h3>
+            <a href="/login" class="member-login" onclick="member()">Member</a>
+          </div>
+        </div>
+
+        <!-- 
+    <div id="my-admin"class="admin">
+      <a href="#" class="admin-close-btn" onclick="closeadmin()">
+        <i class="fas fa-times"></i>
+      </a>
+      <strong>LOGIN</strong>
+      <form action="">
+        <label for="">MEMBER ID</label>
+        <div class="admin-id">
+          <i class="fas fa-address-card"></i>
+          <input type="text" name="admin-id" required>
+        </div>
+        <input type="submit" name="admin-btn" class="admin-btn" value="SUBMIT">
+      </form>
+    </div>
+
+    
+    <div class="member">
+      <a href="#" class="member-close-btn" onclick="closemember()">
+        <i class="fas fa-times"></i>
+      </a>
+      <strong>LOGIN</strong>
+      <form action="">
+        <label for="">EMAIL ID</label>
+        <div class="email">
+          <i class="far fa-paper-plane"></i>
+          <input type="email" name="email" required>
+        </div>
+        <label for="">MEMBER ID</label>
+        <div class="member-id">
+          <i class="fas fa-address-card"></i>
+          <input type="text" name="admin-id" required>
+        </div>
+        <input type="submit" name="member-btn" class="member-btn" value="SUBMIT">
+      </form>
+    </div>-->
+      </section>
+    </section>
+
+    <script>
+      let admin = () => {
+        let x = document.querySelector(".admin");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      };
+      let member = () => {
+        let y = document.querySelector(".member");
+        if (y.style.display === "none") {
+          y.style.display = "block";
+        } else {
+          y.style.display = "none";
+        }
+      };
+      let closeadmin = () => {
+        let a = document.querySelector(".admin");
+        if (a.style.display === "block") {
+          a.style.display = "none";
+        }
+      };
+      let closemember = () => {
+        let a = document.querySelector(".member");
+        if (a.style.display === "block") {
+          a.style.display = "none";
+        }
+      };
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

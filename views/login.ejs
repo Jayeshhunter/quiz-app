@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/logMem.css" />
+    <title>member login</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="form-container">
+        <span class="form-heading">MEMBER LOGIN</span>
+        <form action="/login">
+          <div class="input-group">
+            <!--<label for="admin-id">ADMIN ID</label><br>-->
+            <i class="fas fa-user"></i>
+            <input type="text" name="hid" id="hid" required></input>
+            <div class="password error"></div>
+            <span class="bar"></span>
+          </div>
+          <div class="input-group">
+            <button type="submit">
+              <i class="fas fa-door-open"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+<!-- <form action="/login">
+    <h2>Login</h2>
+    <label for="hid">SRM HACKEREARTH ID</label>
+    <input type="text" name="hid" id="hid" required></input>
+    <div class="password error"></div>
+    <button type="submit">login</button>
+</form> -->
+<script>
+
+    const passwordError = document.querySelector('.password.error');
+    const form = document.querySelector('form');
+    form.addEventListener('submit',async (e)=>{
+        e.preventDefault();
+
+// passwordError.textContent = '';
+
+
+        const hid = form.hid.value;
+
+        try{
+            const res = await fetch('/login',{
+                method:'POST',
+                body:JSON.stringify({hid}),
+                headers:{'Content-Type':'application/json'}
+            })
+            const data = await res.json();
+            console.log(data);
+            if(data.errors){
+                
+                passwordError.textContent = data.errors.hid;
+            }
+            if(data.user){
+                location.assign('/data/'+ hid);
+                // changew this later to new page
+            }
+        }catch(err){
+            console.log(err);
+        }
+        
+    })
+</script>
+<%- include('partials/footer'); -%>

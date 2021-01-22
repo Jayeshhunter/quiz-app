@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-one: #2d3657;
+  --color-two: white;
+  --color-three: #d7def7;
+  --font-one: "Roboto", sans-serif;
+}
+html {
+  font-size: 10px;
+  font-family: var(--font-one);
+}
+body {
+  background-color: var(--color-three);
+}
+#wrapper {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 100%;
+  max-width: 40rem;
+  background-color: var(--color-two);
+  position: relative;
+  padding: 10rem 0;
+  box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  z-index: 1;
+}
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+  background-color: var(--color-one);
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  z-index: -1;
+}
+.form-heading {
+  color: var(--color-two);
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 3.5rem;
+  left: 10rem;
+}
+form {
+  transform: translateX(10rem);
+  padding: 2rem 0;
+  background-color: var(--color-two);
+  border-radius: 1rem;
+  box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
+}
+.input-group {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+.input-group input {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  color: var(--color-one);
+}
+.input-group > i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--color-one);
+}
+.input-group .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-three);
+  width: 100%;
+  height: 1px;
+}
+.input-group .bar::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-one);
+  width: 0;
+  height: 2px;
+  transition: width 1s;
+}
+.input-group input:focus + .bar::before {
+  width: 100%;
+}
+.input-group button {
+  margin: 3rem auto;
+  padding: 1rem 5rem;
+  background-color: var(--color-one);
+  border: none;
+  color: var(--color-two);
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  transition: 0.5s;
+}
+.input-group button:hover {
+  background-color: var(--color-three);
+  color: var(--color-one);
+}
+.switch-login {
+  text-align: center;
+}
+.switch-login a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+  font-size: 1.3rem;
+}
+.switch-login span {
+  color: black;
+  font-weight: 600;
+}
+.switch-login span:hover {
+  color: var(--color-one);
+  font-size: 1.5rem;
+}
+.switch-login a:hover {
+  color: var(--color-one);
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 700px) {
+  .form-container::before {
+    height: 10rem;
+  }
+  .form-heading {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  form {
+    border-radius: initial;
+    transform: initial;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,100 @@
+<%- include('partials/header'); -%>
+  <form autocomplete="off" id="form" action="/data/<%=id%>" method="POST">
+    <div id="focus"></div>
+    <h1>Add a task</h1>
+    <input type="text" half placeholder="Title" name="title" id="title" autocomplete="no" />
+    <input type="text" half placeholder="Assigned by" name="assigned" id="assigned" autocomplete="no" />
+    <!-- <input type="text" half placeholder="Date assigned" name="timingSt" id="timingSt" autocomplete="no" /> -->
+    <input type="text" half placeholder="Date completed" name="timingEn" id="timingEn" autocomplete="no" />
+    <input type="text" placeholder="Description" name="desc" id="desc" autocomplete="no" />
+    
+    <input type="submit" value="Submit" />
+  </form>
+  <!-- tasks -->
+  <section id="tasks">
+    <main class="my-page">
+      <div class="my-grid">
+        <div class="my-grid-column">
+          <div class="my-jobs">
+            
+            <h2 class="title">My tasks</h2>
+            <% if(array.length !== 0){ %>
+            <% for(var i=0; i<array.length; i++) { %>
+            <section class="my-timeline my-job">
+              <h3 class="my-timeline-heading">
+                <span class="my-timeline-heading-title"><%= (array[i]).title %> </span>&#8211;
+                <span class="my-timeline-heading-location">Assigned by <%=(array[i]).assigner %></span
+                ><small class="my-timeline-heading-duration">Deadline - <%=(array[i]).deadline  %></small>
+              </h3>
+              <ul class="my-timeline-details">
+                <li class="my-job-timeline-item">
+                  <%= (array[i]).desc %> 
+                </li>
+              </ul>
+            </section>
+            <% } %>
+            <% }else{ %>
+              <section class="my-timeline my-job">
+                <ul class="my-timeline-details">
+                  <li class="my-job-timeline-item">
+                    No task is Assigned yet 
+                  </li>
+                </ul>
+              </section>
+              <% } %>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  <script>
+    const form = $("#form");
+const tasks = $("#tasks");
+const types = ["input[type=text], input[type=submit]"];
+const focus = $("#focus");
+// tasks.hide();
+let position = (e) => {
+  var props = {
+    top: e.offset().top,
+    left: e.offset().left,
+    width: e.outerWidth(),
+    height: e.outerHeight(),
+    radius: parseInt(e.css("border-radius")),
+  };
+
+  focus.css({
+    top: props.top,
+    left: props.left,
+    width: props.width,
+    height: props.height,
+    "border-radius": props.radius,
+  });
+
+  focus.fadeIn(200);
+};
+
+form.find(types.join()).each(function (i) {
+  $(this).focus(function () {
+    el = $(this);
+    $(window).resize(function () {
+      position(el);
+    });
+
+    position(el);
+  });
+});
+
+form.on("focusout", function (e) {
+  setTimeout(function () {
+    if (!e.delegateTarget.contains(document.activeElement)) {
+      focus.fadeOut(200);
+    }
+  }, 0);
+});
+
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

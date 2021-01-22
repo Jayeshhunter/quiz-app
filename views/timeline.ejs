@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/timeline.css">
+    <title>timeline</title>
+</head>
+<body>
+    
+        <h1>members work timeline</h1>
+        <section class="time-line" id="timeline">
+           <% for(var i=0; i<ans.length; i++) { %>
+            <div class="content">
+                <h2 class="header"><%= (ans[i]).title %></h2>
+                <p class="time">
+                    Deadline- <%=(ans[i]).deadline%><br>
+                    <!-- Assigned by <%=(ans[i]).assigner %>     -->
+                </p>
+                <h4>Assigned by-<%=(ans[i]).assigner %></h4>
+                <p class="info">
+                    <%= (ans[i]).desc %> 
+                </p>
+                
+            </div>
+            <% } %>
+            
+
+        </section>
+    
+</body>
+</html>

@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+a,
+p,
+input,
+label,
+button,
+div,
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #444;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 120px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav li {
+  margin-left: 20px;
+}
+nav li a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn {
+  border-radius: 36px;
+  background: #fee996;
+}
+form h2 {
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+form {
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label {
+  display: block;
+  margin: 20px 0 10px;
+}
+button {
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #fee996;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error {
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 250px;
+  margin-right: 40px;
+}
+header h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+header .btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80px AUTO;
+  max-width: 1200px;
+}
+.recipe {
+  display: inline-block;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px;
+}
+.recipe img {
+  width: 100px;
+  margin: -30px auto 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --color: #d09b52;
+  --color-one: #4059ad;
+  --color-two: #6b9ac4;
+  --color-three: #97d8c4;
+  --color-four: #eff2f1;
+  --color-five: #f4b942;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+form {
+  margin-top: 30px !important;
+
+  border: 2px solid var(--color-two);
+  padding: 40px 10px 0px 40px;
+  width: 70%;
+  max-width: 700px;
+  border-radius: 20px;
+}
+#focus {
+  border: 3px solid #fef6fb;
+  box-shadow: 0 0 10px 0 var(--color-two);
+  position: absolute;
+  transition: width 0.2s ease, height 0.2s ease, left 0.2s ease, top 0.2s ease,
+    border-radius 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+  border-radius: 10px;
+  display: none;
+}
+h1 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #000;
+}
+input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  color: #868283;
+}
+input[type="text"] {
+  width: calc(100% - 30px);
+  margin-bottom: 30px;
+  border: 2px solid #868283;
+}
+input[type="text"]:placeholder-shown {
+  border: 2px solid #eae4da;
+}
+input[type="text"]::placeholder {
+  color: #a3a5aa;
+}
+input[type="text"][half] {
+  width: calc(50% - 30px);
+  float: left;
+  margin-right: 30px;
+}
+input[type="submit"] {
+  background: var(--color-two);
+  color: #f3f3f3;
+  border: 2px solid var(--color-two);
+  outline: 10px solid #fff;
+  width: calc(50% - 30px);
+  height: 40px;
+  margin: 0 30px -20px 0;
+  float: right;
+  font-weight: 800;
+  font-size: 0.7em;
+  letter-spacing: 1.8pt;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  outline-width: 0;
+}
+input:focus {
+  outline: 0;
+}
+#desc {
+  padding-bottom: 30px;
+}
+#tasks {
+  position: relative;
+  top: 60px;
+  /* left: 30px; */
+  max-width: 95%;
+  /* left: 25%; */
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  /* margin-bottom: 60px; */
+  padding-bottom: 20px;
+  /* font-family: "Ubuntu", sans-serif; */
+}
+#tasks .my-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2em;
+  color: #222;
+  font-size: 1em;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+@media all and (max-width: 500px) {
+  #tasks .my-page {
+    padding: 0 1em;
+  }
+}
+#tasks .my-page {
+  width: auto;
+}
+#tasks .my-secondaryHeading {
+  position: relative;
+  margin: 2em 0 0;
+  text-transform: uppercase;
+}
+#tasks .my-grid {
+  display: table;
+}
+#tasks .my-grid-column {
+  display: table-cell;
+}
+#tasks .my-timeline {
+  position: relative;
+  margin: 0 0 0 0.5em;
+  padding: 0px 0 0px 1.5em;
+  border-left: solid 1px #222;
+}
+#tasks .my-timeline:first-of-type {
+  margin-top: 1em;
+}
+#tasks .my-timeline:last-of-type {
+  border-left-color: transparent;
+}
+#tasks .my-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: solid 1px #222;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#tasks .my-timeline-heading {
+  margin: 0;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  font-weight: normal;
+  -webkit-transform: translateY(-0.1em);
+  -ms-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
+}
+#tasks .my-timeline-heading-title {
+  line-height: 1;
+  color: var(--color-two);
+  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#tasks .my-timeline-heading-location {
+  font-size: 0.9em;
+}
+#tasks .my-timeline-heading-duration {
+  display: block;
+  font-size: 0.8em;
+  color: #6f6f6f;
+}
+#tasks .my-timeline-details {
+  display: block;
+  margin: 0;
+  padding-bottom: 2em;
+  padding: 0 0 2em 1em;
+  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+}
+#tasks .my-timeline-details-item {
+  margin-bottom: 0.5em;
+}
