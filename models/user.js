@@ -12,13 +12,19 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please enter an Id"],
   },
-  arObj: [
+  forms: [
     {
-      _id: false,
-      title: String,
-      assigner: String,
-      deadline: String,
-      desc: String,
+      id: String,
+      url: String,
+      arObj: [
+        {
+          question: String,
+          answer: String,
+          options: String,
+          noOfItem: [],
+        },
+      ],
+      responses: [{}],
     },
   ],
 });

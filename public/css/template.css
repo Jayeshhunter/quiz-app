@@ -1,0 +1,92 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+}
+.nav-item {
+  margin: auto 5px;
+}
+.sidepanel {
+  width: 0;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 17px;
+  background-color: #f8f8f8;
+  color: #111;
+  overflow-x: hidden;
+  padding: 5% 2%;
+}
+
+.sidepanel li {
+  margin: 10px 0;
+  display: block;
+  transition: 0.3s;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.container {
+  position: absolute;
+  top: 100px;
+  align-content: center;
+  left: calc(280px);
+}
+.top {
+  background-color: rgb(103, 58, 183);
+
+  height: 10px;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: calc(100% + 2px);
+}
+.card {
+  width: 900px;
+  margin-bottom: 20px;
+}
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+  cursor: text;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: none;
+  color: #111;
+}
+input:invalid {
+  outline: 0;
+  color: #ff2300;
+  border-color: #ff2300;
+}
+input:focus,
+input:valid {
+  border-color: #00dd22;
+}
+input:focus ~ label,
+input:valid ~ label {
+  font-size: 14px;
+  top: -24px;
+  color: #00dd22;
+}
+.card-title {
+  font-weight: bold;
+}
+.add {
+  margin-left: 68px;
+}
